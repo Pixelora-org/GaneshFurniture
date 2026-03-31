@@ -9,9 +9,10 @@ const Features = () => {
     {
       icon: Award,
       title: 'Premium Quality',
-      description: 'We use only the finest materials and craftsmanship to ensure every piece meets our high standards.',
-      color: 'text-amber-600',
-      bgColor: 'bg-amber-100'
+      description:
+        'We use only the finest materials and craftsmanship to ensure every piece meets our high standards.',
+      color: 'text-sky-700',
+      bgColor: 'bg-sky-100',
     },
     {
       icon: Truck,
@@ -51,76 +52,75 @@ const Features = () => {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Why Choose Korada Furniture?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We&apos;re committed to providing exceptional furniture solutions with unmatched
-            quality, service, and customer satisfaction.
-          </p>
-        </motion.div>
+    <section className="bg-white py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start"
+          >
+            <p className="text-sm font-semibold uppercase tracking-widest text-sky-700">Why Korada</p>
+            <h2 className="mt-3 text-4xl font-bold text-slate-900 lg:text-5xl">
+              Why Choose Korada Furniture?
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-slate-600">
+              We&apos;re committed to exceptional furniture solutions with unmatched quality, service,
+              and customer satisfaction.
+            </p>
+          </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Icon */}
-              <div className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className={`h-8 w-8 ${feature.color}`} />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
+          <div className="lg:col-span-8">
+            <div className="divide-y divide-slate-200 border-y border-slate-200">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, x: 24 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.06 }}
+                  viewport={{ once: true }}
+                  className="group flex gap-5 py-7 md:gap-6"
+                >
+                  <div className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${feature.bgColor}`}>
+                    <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-sky-700">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-slate-600">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 lg:p-12"
+          className="mt-16 rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
+          <div className="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
             <div>
-              <div className="text-4xl lg:text-5xl font-bold mb-2">1000+</div>
-              <div className="text-amber-100">Happy Customers</div>
+              <div className="text-3xl font-bold text-slate-900 md:text-4xl">1000+</div>
+              <div className="mt-1 text-sm text-slate-600">Happy Customers</div>
             </div>
             <div>
-              <div className="text-4xl lg:text-5xl font-bold mb-2">5000+</div>
-              <div className="text-amber-100">Products Delivered</div>
+              <div className="text-3xl font-bold text-slate-900 md:text-4xl">5000+</div>
+              <div className="mt-1 text-sm text-slate-600">Products Delivered</div>
             </div>
             <div>
-              <div className="text-4xl lg:text-5xl font-bold mb-2">15+</div>
-              <div className="text-amber-100">Years Experience</div>
+              <div className="text-3xl font-bold text-slate-900 md:text-4xl">15+</div>
+              <div className="mt-1 text-sm text-slate-600">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl lg:text-5xl font-bold mb-2">100%</div>
-              <div className="text-amber-100">Customer Satisfaction</div>
+              <div className="text-3xl font-bold text-slate-900 md:text-4xl">100%</div>
+              <div className="mt-1 text-sm text-slate-600">Commitment</div>
             </div>
           </div>
         </motion.div>

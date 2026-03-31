@@ -40,7 +40,7 @@ const DealersPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-600 to-orange-600 py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ const DealersPage = () => {
             className="text-center text-white"
           >
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Become a Dealer</h1>
-            <p className="text-xl lg:text-2xl text-amber-100 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-sky-100 max-w-3xl mx-auto">
               Join our network of authorized dealers and grow your business with Korada Furniture
             </p>
           </motion.div>
@@ -213,7 +213,7 @@ const DealersPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -223,7 +223,7 @@ const DealersPage = () => {
             className="text-white"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Join Our Network?</h2>
-            <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-sky-100 mb-8 max-w-3xl mx-auto">
               Start your journey as a Korada Furniture dealer and grow your business with us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

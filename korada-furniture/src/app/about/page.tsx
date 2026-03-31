@@ -77,8 +77,8 @@ const AboutPage = () => {
                   furniture industry, serving customers across the state with our comprehensive range of products.
                 </p>
                 <p>
-                  Today, we&apos;re proud to offer everything from office cabinets and lockers to steel products
-                  and home furniture, all crafted with the same commitment to quality that has defined us from day one.
+                  Today, we&apos;re proud to offer office cabinets, lockers, wardrobes and related storage
+                  solutions, all crafted with the same commitment to quality that has defined us from day one.
                 </p>
               </div>
             </motion.div>

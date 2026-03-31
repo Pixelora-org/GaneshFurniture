@@ -9,23 +9,15 @@ const CataloguePage = () => {
   const catalogues = [
     {
       title: 'Office Furniture Catalogue 2024',
-      description: 'Complete range of office cabinets, desks, and storage solutions',
+      description: 'Office cabinets, filing and storage — single door through library systems',
       pages: 24,
       size: '2.5 MB',
       category: 'Office Furniture',
       image: '🏢'
     },
     {
-      title: 'Steel Products Catalogue',
-      description: 'Heavy-duty steel furniture and industrial solutions',
-      pages: 18,
-      size: '1.8 MB',
-      category: 'Steel Products',
-      image: '⚙️'
-    },
-    {
       title: 'Home Furniture Collection',
-      description: 'Wardrobes, dressing cabinets, and home storage solutions',
+      description: 'Wardrobes and home storage solutions',
       pages: 32,
       size: '3.2 MB',
       category: 'Home Furniture',
@@ -44,7 +36,7 @@ const CataloguePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-600 to-orange-600 py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +45,7 @@ const CataloguePage = () => {
             className="text-center text-white"
           >
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Product Catalogue</h1>
-            <p className="text-xl lg:text-2xl text-amber-100 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-sky-100 max-w-3xl mx-auto">
               Browse our comprehensive catalogues to explore our complete range of furniture solutions
             </p>
           </motion.div>
@@ -151,7 +143,7 @@ const CataloguePage = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -160,17 +152,17 @@ const CataloguePage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Questions About Our Products?</h2>
-            <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-sky-100 mb-8 max-w-3xl mx-auto">
               Our team is here to help you find the perfect furniture solution for your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="bg-white/10 rounded-lg p-4">
                 <p className="font-semibold">Call Us</p>
-                <p className="text-amber-100">+91-94483-67202</p>
+                <p className="text-sky-100">+91-94483-67202</p>
               </div>
               <div className="bg-white/10 rounded-lg p-4">
                 <p className="font-semibold">Email Us</p>
-                <p className="text-amber-100">koradafurniture@gmail.com</p>
+                <p className="text-sky-100">koradafurniture@gmail.com</p>
               </div>
             </div>
           </motion.div>

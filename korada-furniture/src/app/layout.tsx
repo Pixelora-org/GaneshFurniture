@@ -8,8 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Korada Furniture - Quality Furniture Solutions",
-  description: "Premium office furniture, lockers, cabinets, and steel products. Korada Furniture Co. Pvt. Ltd. - Your trusted furniture partner in Karnataka.",
-  keywords: "furniture, office furniture, lockers, cabinets, steel products, Karnataka, Hubli, Korada Furniture",
+  description:
+    "Office cabinets, lockers and wardrobes — Korada Furniture Co. Pvt. Ltd., Karnataka.",
+  keywords:
+    "furniture, office cabinets, lockers, wardrobes, storage, Karnataka, Hubli, Korada Furniture",
 };
 
 export default function RootLayout({

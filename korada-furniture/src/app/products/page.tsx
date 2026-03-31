@@ -9,90 +9,57 @@ const ProductsPage = () => {
   const categories = [
     {
       name: 'Office Cabinets',
-      description: 'Professional storage solutions for your office space',
-      features: ['Single Door', 'Double Door', 'Slimline', 'Library'],
+      description: 'Professional storage — single door, double door, slimline, library and more.',
+      features: ['Single & double door', 'Slimline', 'Library systems', 'Brochure download'],
       image: '🏢',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'from-blue-50 to-blue-100',
       href: '/products/office-cabinets',
-      popular: true
+      popular: true,
     },
     {
       name: 'Lockers',
-      description: 'Secure storage solutions for personal belongings',
-      features: ['Steel Construction', 'Multiple Sizes', 'Secure Locking'],
+      description: 'Secure locker banks for workplaces, education and industrial facilities.',
+      features: ['Multi-tier options', 'Robust locking', 'Ventilated doors', 'Brochure download'],
       image: '🔒',
       color: 'from-gray-500 to-gray-600',
       bgColor: 'from-gray-50 to-gray-100',
       href: '/products/lockers',
-      popular: false
-    },
-    {
-      name: 'Dressing Cabinets',
-      description: 'Elegant storage solutions for your wardrobe',
-      features: ['Mirror Options', 'Multiple Drawers', 'Hanging Space'],
-      image: '👗',
-      color: 'from-pink-500 to-pink-600',
-      bgColor: 'from-pink-50 to-pink-100',
-      href: '/products/dressing-cabinets',
-      popular: false
-    },
-    {
-      name: 'Steel Products',
-      description: 'Durable metal furniture for heavy-duty use',
-      features: ['Heavy Duty', 'Rust Resistant', 'Long Lasting'],
-      image: '⚙️',
-      color: 'from-slate-500 to-slate-600',
-      bgColor: 'from-slate-50 to-slate-100',
-      href: '/products/steel-products',
-      popular: true
-    },
-    {
-      name: 'Tables & Chairs',
-      description: 'Comfortable seating and workspace solutions',
-      features: ['Ergonomic Design', 'Adjustable Height', 'Comfortable'],
-      image: '🪑',
-      color: 'from-amber-500 to-amber-600',
-      bgColor: 'from-amber-50 to-amber-100',
-      href: '/products/tables-chairs',
-      popular: false
+      popular: true,
     },
     {
       name: 'Wardrobes',
-      description: 'Spacious storage solutions for your clothes',
-      features: ['Large Capacity', 'Organized Storage', 'Modern Design'],
+      description: 'Spacious bedroom storage — sizes and finishes tailored to your space.',
+      features: ['Large capacity', 'Organised interiors', 'Quality hardware', 'Showroom support'],
       image: '👔',
       color: 'from-purple-500 to-purple-600',
       bgColor: 'from-purple-50 to-purple-100',
       href: '/products/wardrobes',
-      popular: false
-    }
+      popular: false,
+    },
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-600 to-orange-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">Our Products</h1>
-            <p className="text-xl lg:text-2xl text-amber-100 max-w-3xl mx-auto">
-              Discover our comprehensive range of high-quality furniture solutions 
-              designed to meet your every need.
+            <h1 className="mb-6 text-4xl font-bold lg:text-6xl">Our Products</h1>
+            <p className="mx-auto max-w-3xl text-xl text-sky-100 lg:text-2xl">
+              Office cabinets, lockers and wardrobes — engineered for durability and daily use.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Products Grid */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {categories.map((category, index) => (
               <motion.div
                 key={category.name}
@@ -100,100 +67,93 @@ const ProductsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl"
               >
-                {/* Popular Badge */}
                 {category.popular && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="bg-amber-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <div className="absolute right-4 top-4 z-10">
+                    <span className="rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-white">
                       Popular
                     </span>
                   </div>
                 )}
 
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${category.bgColor} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                />
+
                 <div className="relative p-8">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${category.color} text-3xl transition-transform duration-300 group-hover:scale-110`}
+                  >
                     {category.image}
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">
+                  <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors group-hover:text-gray-800">
                     {category.name}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {category.description}
-                  </p>
+                  <p className="mb-6 leading-relaxed text-gray-600">{category.description}</p>
 
-                  {/* Features */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <h4 className="mb-3 font-semibold text-gray-900">Highlights</h4>
                     <ul className="space-y-2">
                       {category.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0" />
+                          <div className="mr-3 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* CTA */}
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="group/btn w-full justify-between"
-                    onClick={() => window.location.href = category.href}
+                    onClick={() => (window.location.href = category.href)}
                   >
-                    View Collection
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    View range
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
                 </div>
 
-                {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-16 text-center"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Our Products?
+            <h2 className="mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">
+              Why choose our products?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We&apos;re committed to providing exceptional furniture solutions with unmatched
-              quality, durability, and customer satisfaction.
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
+              We&apos;re committed to exceptional furniture with unmatched quality, durability, and
+              customer satisfaction.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="group text-center"
             >
-              <div className="w-20 h-20 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-amber-100 transition-transform duration-300 group-hover:scale-110">
                 <Star className="h-10 w-10 text-amber-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Premium Quality</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We use only the finest materials and craftsmanship to ensure every piece 
-                meets our high standards of quality and durability.
+              <h3 className="mb-4 text-2xl font-bold text-gray-900">Premium quality</h3>
+              <p className="leading-relaxed text-gray-600">
+                Fine materials and careful fabrication so every piece meets our standards.
               </p>
             </motion.div>
 
@@ -202,15 +162,14 @@ const ProductsPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="group text-center"
             >
-              <div className="w-20 h-20 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-amber-100 transition-transform duration-300 group-hover:scale-110">
                 <Shield className="h-10 w-10 text-amber-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Durable & Long-lasting</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Built to withstand daily use with robust construction and quality materials 
-                that ensure your furniture lasts for years to come.
+              <h3 className="mb-4 text-2xl font-bold text-gray-900">Built to last</h3>
+              <p className="leading-relaxed text-gray-600">
+                Robust construction for offices, institutions and high-traffic environments.
               </p>
             </motion.div>
 
@@ -219,24 +178,22 @@ const ProductsPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="group text-center"
             >
-              <div className="w-20 h-20 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-amber-100 transition-transform duration-300 group-hover:scale-110">
                 <Truck className="h-10 w-10 text-amber-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Fast Delivery</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick and reliable delivery service across Karnataka. Get your furniture 
-                when you need it with our efficient logistics network.
+              <h3 className="mb-4 text-2xl font-bold text-gray-900">Reliable delivery</h3>
+              <p className="leading-relaxed text-gray-600">
+                Efficient logistics across Karnataka so your project stays on schedule.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-20">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -244,19 +201,27 @@ const ProductsPage = () => {
             viewport={{ once: true }}
             className="text-white"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
-              Contact us today to discuss your furniture requirements and get a personalized quote.
+            <h2 className="mb-6 text-4xl font-bold lg:text-5xl">Ready to plan your space?</h2>
+            <p className="mx-auto mb-8 max-w-3xl text-xl text-sky-100">
+              Contact us for quotations, site visits and custom layouts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="group">
-                Get Quote
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="group"
+                onClick={() => (window.location.href = '/contact')}
+              >
+                Get in touch
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-amber-600">
-                View Catalogue
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-amber-600"
+                onClick={() => (window.location.href = '/catalogue')}
+              >
+                View catalogue
               </Button>
             </div>
           </motion.div>

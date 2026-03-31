@@ -32,7 +32,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-600 to-orange-600 py-20">
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ const ContactPage = () => {
             className="text-center text-white"
           >
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl lg:text-2xl text-amber-100 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-sky-100 max-w-3xl mx-auto">
               Get in touch with us for all your furniture needs. We&apos;re here to help you find the perfect solution.
             </p>
           </motion.div>
