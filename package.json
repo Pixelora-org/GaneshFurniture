@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "npm --prefix ./korada-furniture run dev",
     "build": "npm --prefix ./korada-furniture run build",
-    "vercel-build": "npm --prefix ./korada-furniture run build",
+    "vercel-build": "node ./scripts/vercel-build-root.mjs",
     "start": "npm --prefix ./korada-furniture run start",
     "lint": "npm --prefix ./korada-furniture run lint"
   }
