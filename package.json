@@ -1,0 +1,11 @@
+{
+  "name": "ganeshfurniture-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ./korada-furniture run dev",
+    "build": "npm --prefix ./korada-furniture run build",
+    "vercel-build": "npm --prefix ./korada-furniture run build",
+    "start": "npm --prefix ./korada-furniture run start",
+    "lint": "npm --prefix ./korada-furniture run lint"
+  }
+}
